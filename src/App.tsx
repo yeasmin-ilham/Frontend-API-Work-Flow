@@ -3,6 +3,8 @@
 import { ProductList } from './components/ProductList'
 import { ProductForm } from './components/ProductForm'
 import { ProductCard } from './components/ProductCard'
+import { ProductsPage } from './pages/ProductsPage'
+import { ProductDetailPage } from './pages/ProductDetailPage'
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
       <ProductList/>
       <ProductForm/>
       <ProductCard  product={ProductValue}/>
+      <ProductsPage/>
+      <ProductDetailPage/>
     </div>
     </>
   )

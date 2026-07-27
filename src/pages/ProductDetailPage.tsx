@@ -1,5 +1,5 @@
 // pages/ProductDetailPage.tsx
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { useProduct } from "../hooks/useProduct";
@@ -18,13 +18,7 @@ export function ProductDetailPage() {
   const [stock, setStock] = useState("");
 
   // Sync local form state once the product loads
-  useEffect(() => {
-    if (product) {
-      setName(product.name);
-      setPrice(String(product.price));
-      setStock(String(product.stock));
-    }
-  }, [product]);
+
 
   function handleSave() {
     if (!id) return;

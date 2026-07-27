@@ -4,7 +4,7 @@ import { useProducts } from "../hooks/useProducts";
 import { useDeleteProduct } from "../hooks/useDeleteProduct";
 
 export function ProductList() {
-    
+
   const { data: products, isPending, isError, error } = useProducts();
   const {mutate , isPending: deletePending} = useDeleteProduct();
 
@@ -23,17 +23,17 @@ export function ProductList() {
 
   return (
     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {products.map((product) => (
+      
         <li
-          key={product.id}
+          key={products.id}
           className="rounded-lg border border-border p-4 shadow-sm"
         >
-          <h3 className="font-semibold">{product.name}</h3>
+          <h3 className="font-semibold">{products.name}</h3>
           <p className="text-sm text-muted-foreground">
-            ${product.price} • {product.stock} in stock
+            ${products.price} • {products.stock} in stock
           </p>
           <button
-            onClick={() => mutate(product.id)}
+            onClick={() => mutate(products.id)}
             disabled={deletePending}
             className="mt-2 inline-flex items-center gap-1 text-sm text-red-500 hover:text-red-600"
           >
@@ -41,7 +41,7 @@ export function ProductList() {
             Delete
           </button>
         </li>
-      ))}
+      
     </ul>
   );
 }
