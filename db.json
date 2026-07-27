@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "MacBook Air M3",
+      "price": 1299,
+      "stock": 15,
+      "category": "Laptop",
+      "createdAt": "2026-07-28T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "name": "iPhone 17",
+      "price": 999,
+      "stock": 30,
+      "category": "Smartphone",
+      "createdAt": "2026-07-28T10:05:00.000Z"
+    },
+    {
+      "id": "3",
+      "name": "Samsung Galaxy S26",
+      "price": 899,
+      "stock": 20,
+      "category": "Smartphone",
+      "createdAt": "2026-07-28T10:10:00.000Z"
+    },
+    {
+      "id": "4",
+      "name": "Sony WH-1000XM6",
+      "price": 399,
+      "stock": 25,
+      "category": "Headphones",
+      "createdAt": "2026-07-28T10:15:00.000Z"
+    },
+    {
+      "id": "5",
+      "name": "Dell 27 4K Monitor",
+      "price": 549,
+      "stock": 12,
+      "category": "Monitor",
+      "createdAt": "2026-07-28T10:20:00.000Z"
+    }
+  ]
+}
