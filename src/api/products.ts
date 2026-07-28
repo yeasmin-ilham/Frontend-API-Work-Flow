@@ -1,10 +1,11 @@
 
 // READ
 
+import { BASE_URL } from "./config";
 import type {  CreateProductPayload, Product, UpdateProductPayload  } from "./types";
 
 export async function getProducts(): Promise<Product> {
-  const response = await fetch("/api/products", {
+  const response = await fetch(`${BASE_URL}/products`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +25,7 @@ export async function getProducts(): Promise<Product> {
 // READ (Single)
 
 export async function getProductById(id: string): Promise<Product> {
-  const response = await fetch(`/api/products/${id}`, {
+  const response = await fetch(`${BASE_URL}/products/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -44,7 +45,7 @@ export async function getProductById(id: string): Promise<Product> {
 // CREATE
 
 export async function createProduct(payload: CreateProductPayload): Promise<Product> {
-  const response = await fetch("/api/products", {
+  const response = await fetch(`${BASE_URL}/products`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -65,7 +66,7 @@ export async function createProduct(payload: CreateProductPayload): Promise<Prod
 // UPDATE
 
 export async function updateProduct(id: string, payload: UpdateProductPayload): Promise<Product> {
-  const response = await fetch(`/api/products/${id}`, {
+  const response = await fetch(`${BASE_URL}/products/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -86,7 +87,7 @@ export async function updateProduct(id: string, payload: UpdateProductPayload): 
 // DELETE
 
 export async function deleteProduct(id: string): Promise<void> {
-  const response = await fetch(`/api/products/${id}`, {
+  const response = await fetch(`${BASE_URL}/products/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
